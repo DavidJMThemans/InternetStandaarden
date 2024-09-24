@@ -1,0 +1,113 @@
+/*
+    Voor een class gebruik je: .class{}
+    Voor een id gebruik je: #id{}  
+    Meerdere selecteren: p, a, h1 {}
+    Descendant selecteren: footer p {}
+    Vergeet niet je regels altijd te eindigen met ;
+
+    Margin en padding met verschillende waarden is alsvolgt
+    1 waarde = margin: vertical+horizontal
+    2 waarden = margin: vertical horizontal
+    3 waarden = top horizontal bottom
+    4 waarden = top right bottom left
+
+
+    Met border geldt
+    border: size style color
+    
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav a {
+    color: #000000;
+    text-decoration: none;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    transition: all 0.5s ease 0.2s;
+    margin: 2em;
+}
+
+footer{
+    background-color: #FFFFFF;
+    display: flex;
+    align-items: flex-end;
+    padding: 10px;
+    font-family:Arial, Helvetica, sans-serif;
+    color:#000000;
+}
+
+section {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+section ul {
+display: flex;
+justify-content: flex-end;
+list-style-type: none;
+padding: 10px;
+}
+
+a:hover {
+    color: #a10000
+}
+
+body {
+    background-color: #000000;
+    color: #FFFFFF;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin: 20px;
+}
+
+h1 {
+    color: #a10000;
+    margin: 0.2em 1em;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+h2 {
+    margin: 5px 0px;
+}
+
+header {
+    display: flex;
+    background-color: #FFFFFF;
+    align-items: center;
+}
+
+header img {
+    margin: 0.5em;
+    align-items: center;
+}
+
+nav ul {
+display: flex;
+list-style-type: none;
+}
+
+section.afleveringtxt {
+    display: flex;
+    width: 60%;
+    margin: 1em;
+    padding: 1em;
+    border: solid 2px;
+    border-radius: 10px;
+    height: 200px;
+}
+
+section.thumbnail {
+    margin: 1em;
+    height: 200px;
+    display: flex;
+}
