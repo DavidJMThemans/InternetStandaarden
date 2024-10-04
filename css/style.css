@@ -143,7 +143,7 @@ article.afleveringtxt {
 }
 
 /*opmaak voor de tekst op de over ons pagina*/
-.overonsblok {
+article.overonsblok {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
