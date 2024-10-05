@@ -70,12 +70,28 @@ header ul{
     display: flex;
 }
 
+@keyframes fadein {
+
+    0% {
+        opacity: 0.0;
+    }
+
+    20% {
+        opacity: 0.2;
+    }
+
+    100% {
+        opacity: 1.0;
+    }
+}
+
 h1 {
     color: #a10000;
     margin: 0.4em 1em;
     font-weight: lighter;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
+
 
 h2 {
     margin: 0.3em;
@@ -114,15 +130,38 @@ a:hover {
     cursor: pointer;
 }
 
-section.reviews {
+section.introtekst {
+    animation-name: fadein;
+    animation-duration: 1s;
+}
+
+.trailer {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100vw;
+    justify-content: center;
+    width: 50vw;
+    animation-name: fadein;
+    animation-duration: 2s;
+}
+
+.reviews {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: center;
+    animation-name: fadein;
+    animation-duration: 3s;
 }
 
 article {
     padding: 1em;
     margin: 1em;
     background-color: #222222;
+}
+
+.reviews article {
+    width: 13.5em;
 }
 
 /*opmaak voor de afleveringen: thumbnail met daarnaast een tekstvak met de beschrijving*/
@@ -149,4 +188,54 @@ article.overonsblok {
     flex-wrap: wrap;
     text-align: center;
     margin: 10px;
+}
+
+#overons1 {
+    animation-name: fadein;
+    animation-duration: 1s;
+}
+
+#overons2 {
+    animation-name: fadein;
+    animation-duration: 2s;
+}
+
+#overons3 {
+    animation-name: fadein;
+    animation-duration: 3s;
+}
+
+#overons4 {
+    animation-name: fadein;
+    animation-duration: 4s;
+}
+
+#aflevering1 {
+    animation-name: fadein;
+    animation-duration: 1s;
+}
+
+#aflevering2 {
+    animation-name: fadein;
+    animation-duration: 1.5s;
+}
+
+#aflevering3 {
+    animation-name: fadein;
+    animation-duration: 2s;
+}
+
+#aflevering4 {
+    animation-name: fadein;
+    animation-duration: 2.5s;
+}
+
+#aflevering5 {
+    animation-name: fadein;
+    animation-duration: 3s;
+}
+
+#aflevering6 {
+    animation-name: fadein;
+    animation-duration: 3.5s;
 }
