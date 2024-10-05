@@ -121,7 +121,7 @@ footer{
     justify-content: center;
     text-align: center;
     padding: 10px;
-    font-family:Arial, Helvetica, sans-serif;
+    font-family: zodiak-thin;
     color:#ffffff;
     border-radius: 2em;
     margin: 1em;
@@ -140,9 +140,6 @@ section.introtekst {
 .trailer {
     display: flex;
     flex-wrap: wrap;
-    width: 100vw;
-    justify-content: center;
-    width: 50vw;
     animation-name: fadein;
     animation-duration: 2s;
 }
@@ -174,6 +171,23 @@ img.thumbnail {
 
 .afleveringen {
     display: flex;
+}
+
+img.hostfotos {
+    width: auto;
+    max-height: 15em;
+}
+
+.overonshosts {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+article.voorstellen {
+ display: flex;
+ justify-content: center;
+ text-align: center;
 }
 
 article.afleveringtxt {
@@ -210,6 +224,11 @@ article.overonsblok {
 #overons4 {
     animation-name: fadein;
     animation-duration: 4s;
+}
+
+#overons5 {
+    animation-name: fadein;
+    animation-duration: 5s;
 }
 
 #aflevering1 {
