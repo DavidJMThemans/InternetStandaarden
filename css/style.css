@@ -1,22 +1,3 @@
-/*
-    Voor een class gebruik je: .class{}
-    Voor een id gebruik je: #id{}  
-    Meerdere selecteren: p, a, h1 {}
-    Descendant selecteren: footer p {}
-    Vergeet niet je regels altijd te eindigen met ;
-
-    Margin en padding met verschillende waarden is alsvolgt
-    1 waarde = margin: vertical+horizontal
-    2 waarden = margin: vertical horizontal
-    3 waarden = top horizontal bottom
-    4 waarden = top right bottom left
-
-
-    Met border geldt
-    border: size style color
-    
-*/
-
 @import url('panchang.css');
 @import url('zodiak.css');
 
@@ -26,48 +7,16 @@
     box-sizing: border-box;
 }
 
-body {
-    background-color: #121212;
-    color: #FFFFFF;
-    font-family: zodiak-thin;
+:root {
+    --background-color: #121212;
+    --color: #FFFFFF;
 }
 
-main {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding-bottom: 1em;
-    padding-left: 0.5em;
-}
-
-header {
-    display: flex;
-    background-color: #FFFFFF;
-    align-items: center;
-    width: 100%;
-}
-
-header a {
-    display: flex;
-    color: #000000;
-    text-decoration: none;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    margin: 0.5em;
-}
-
-a {
-    text-decoration: none;
-    color: #FFFFFF;
-    transition: all 0.5s ease 0.2s;
-}
-
-header img {
-    margin: 0.5em;
-    align-items: center;
-}
-
-header ul{
-    display: flex;
+@media (prefers-color-scheme: light) {
+    :root {
+        --background-color: #FFFFFF;
+        --color: #121212;
+    }
 }
 
 @keyframes fadein {
@@ -85,6 +34,12 @@ header ul{
     }
 }
 
+body {
+    background-color: var(--background-color);
+    color: #FFFFFF;
+    font-family: zodiak-thin;
+}
+
 h1 {
     color: #a10000;
     margin: 0.4em 1em;
@@ -99,6 +54,7 @@ h2 {
     text-decoration: none;
     animation-name: fadein;
     animation-duration: 1s;
+    color: var(--color);
 }
 
 h3 {
@@ -106,15 +62,30 @@ h3 {
     font-family: panchang-light;
 }
 
-ul {
-    list-style-type: none;
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-bottom: 1em;
+    padding-left: 0.5em;
 }
 
-p {
-    padding: 10px;
+header {
+    display: flex;
+    background-color: var(--color);
+    align-items: center;
+    width: 100%;
 }
 
-footer{
+article {
+    padding: 1em;
+    margin: 1em;
+    background-color: #222222;
+    border: solid 1px black;
+    border-radius: 0.7em;
+}
+
+footer {
     background-color: #000000;
     display: flex;
     flex-wrap: wrap;
@@ -127,9 +98,50 @@ footer{
     margin: 1em;
 }
 
+a {
+    color: #FFFFFF;
+    padding: 0.5em;
+    border-radius: 0.5em;
+    text-decoration: none;
+    transition: all 0.5s ease 0.2s;
+}
+
 a:hover {
     color: #a10000;
     cursor: pointer;
+}
+
+p {
+    padding: 10px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+header a {
+    display: flex;
+    color: #121212;
+    background-color: #FFFFFF;
+    text-decoration: none;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin: 0.5em;
+}
+
+header img {
+    margin: 0.5em;
+    align-items: center;
+    width: 100px;
+    background-color: #FFFFFF;
+    border-radius: 0.5em;
+}
+
+header ul {
+    display: flex;
+}
+
+h2 a {
+    color: var(--color);
 }
 
 section.introtekst {
@@ -142,6 +154,7 @@ section.introtekst {
     flex-wrap: wrap;
     animation-name: fadein;
     animation-duration: 2s;
+    margin: 1em;
 }
 
 .reviews {
@@ -153,24 +166,34 @@ section.introtekst {
     animation-duration: 2.5s;
 }
 
-article {
-    padding: 1em;
-    margin: 1em;
-    background-color: #222222;
-}
-
 .reviews article {
     width: 13.5em;
 }
 
-/*opmaak voor de afleveringen: thumbnail met daarnaast een tekstvak met de beschrijving*/
 img.thumbnail {
     margin: 1em;
     height: 200px;
 }
 
+/*Opmaak voor de afleveringen op zowel de Home pagina als de Afleveringen pagina, zodat ze consistent er hetzelfde uitzien op beide pagina's*/
 .afleveringen {
     display: flex;
+}
+
+article.afleveringtxt {
+    margin: 1em;
+    padding: 1em;
+    border: solid 2px;
+    border-radius: 10px;
+}
+
+/* Opmaak voor de Over Ons pagina*/
+article.overonsblok {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    text-align: left;
+    margin: 10px;
 }
 
 img.hostfotos {
@@ -190,22 +213,7 @@ article.voorstellen {
  text-align: center;
 }
 
-article.afleveringtxt {
-    margin: 1em;
-    padding: 1em;
-    border: solid 2px;
-    border-radius: 10px;
-}
-
-/*opmaak voor de tekst op de over ons pagina*/
-article.overonsblok {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    text-align: center;
-    margin: 10px;
-}
-
+/* ID's voor de losse blokken op de Over Ons pagina zodat ze allemaal 1 voor 1 in kunnen faden*/
 #overons1 {
     animation-name: fadein;
     animation-duration: 1s;
@@ -231,6 +239,7 @@ article.overonsblok {
     animation-duration: 5s;
 }
 
+/* ID's voor de losse afleveringen op de Afleveringen pagina zodat ze allemaal 1 voor 1 in kunnen faden*/
 #aflevering1 {
     animation-name: fadein;
     animation-duration: 1s;
@@ -243,20 +252,20 @@ article.overonsblok {
 
 #aflevering3 {
     animation-name: fadein;
-    animation-duration: 3s;
+    animation-duration: 2.5s;
 }
 
 #aflevering4 {
     animation-name: fadein;
-    animation-duration: 4s;
+    animation-duration: 3s;
 }
 
 #aflevering5 {
     animation-name: fadein;
-    animation-duration: 5s;
+    animation-duration: 3.5s;
 }
 
 #aflevering6 {
     animation-name: fadein;
-    animation-duration: 6s;
+    animation-duration: 4s;
 }
