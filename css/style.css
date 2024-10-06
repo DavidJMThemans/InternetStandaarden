@@ -7,6 +7,7 @@
     box-sizing: border-box;
 }
 
+/*Over de dark/light mode heb ik uitleg gekregen van Melih, vervolgens zelf toegepast*/
 :root {
     --background-color: #121212;
     --color: #FFFFFF;
